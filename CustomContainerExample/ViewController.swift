@@ -25,7 +25,22 @@ class ViewController: UIViewController {
         
         view.backgroundColor = .red
         
+        let childViewController = UIViewController()
+
+        addChild(childViewController)
+
+        childViewController.view.backgroundColor = .magenta
+        view.insertSubview(childViewController.view, belowSubview: bottomView)
+
+        if let childView = childViewController.view {
+            childView.translatesAutoresizingMaskIntoConstraints = false
+            childView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+            childView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+            childView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+            childView.bottomAnchor.constraint(equalTo: bottomView.topAnchor).isActive = true
+        }
         
+        childViewController.didMove(toParent: self)
     }
     
 }
