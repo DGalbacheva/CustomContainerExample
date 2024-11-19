@@ -33,7 +33,7 @@ class MyViewController: UIViewController {
         
         label3.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(label3)
-        label3.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        label3.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
         label3.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
     }
 }
