@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         
         view.backgroundColor = .red
         
-        let childViewController = UIViewController()
+        let childViewController = MyViewController()
 
         addChild(childViewController)
 
