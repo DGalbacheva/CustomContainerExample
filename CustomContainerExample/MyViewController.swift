@@ -23,7 +23,7 @@ class MyViewController: UIViewController {
         
         label1.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(label1)
-        label1.topAnchor.constraint(equalTo: view.topAnchor).isActive  = true
+        label1.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive  = true
         label1.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         
         label2.translatesAutoresizingMaskIntoConstraints = false
